@@ -1,0 +1,27 @@
+HandySubtitler v1.5.0.1
+
+- github로 프로젝트 이관.
+
+
+end.
+
+
+HandySubtitler v1.5.0.0
+
+- 간격 유효성 검사 강화.
+
+- 주석 강화.
+
+- SaveFileDialog에서 세이브가 제대로 되지 않던 버그 수정.
+> CheckFileExists를 True에서 False로 변경. (원래 디폴트가 False임)
+
+! e.Cancel = true 설정은 자제하도록 하자.
+> 자꾸 알 수 없는 부작용이 발생하는 것 같다.
+
+- 포지션 이동 시에 해당 포지션의 위치를 로그로 남기도록 변경.
+
+- 마지막 자막이 뷰어에서 보이지 않던 버그 수정.
+
+- 개발자 화면 추가.
+
+end.
