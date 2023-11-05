@@ -6,6 +6,9 @@ using System.Windows.Forms;
 
 
 
+/// <summary>
+/// 
+/// </summary>
 namespace HandySubtitler
 {
     static class Program

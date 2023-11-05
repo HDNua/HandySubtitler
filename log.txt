@@ -1,3 +1,13 @@
+HandySubtitler v2.0.0.0
+
+- 유튜브 자막 제작을 위해 Ctrl+W / Ctrl+E 기능 변경.
+
+- Refactoring 진행.
+
+
+end.
+
+
 HandySubtitler v1.5.0.1
 
 - github로 프로젝트 이관.

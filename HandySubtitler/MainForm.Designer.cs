@@ -49,7 +49,8 @@
             this._Tab_Editor = new System.Windows.Forms.TabControl();
             this._TabPage_Work = new System.Windows.Forms.TabPage();
             this._GridView_Work = new System.Windows.Forms.DataGridView();
-            this._GridView_Time = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this._GridView_Frame = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this._GridView_T = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this._GridView_Text = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this._TabPage_Source = new System.Windows.Forms.TabPage();
             this._SubEditor = new System.Windows.Forms.RichTextBox();
@@ -109,9 +110,12 @@
             this._WMPObject.Location = new System.Drawing.Point(3, 3);
             this._WMPObject.Name = "_WMPObject";
             this._WMPObject.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("_WMPObject.OcxState")));
-            this._WMPObject.Size = new System.Drawing.Size(505, 207);
+            this._WMPObject.Size = new System.Drawing.Size(725, 367);
             this._WMPObject.TabIndex = 0;
             this._WMPObject.PositionChange += new AxWMPLib._WMPOCXEvents_PositionChangeEventHandler(this._WMPObject_PositionChange);
+            this._WMPObject.KeyDownEvent += new AxWMPLib._WMPOCXEvents_KeyDownEventHandler(this._WMPObject_KeyDownEvent);
+            this._WMPObject.KeyPressEvent += new AxWMPLib._WMPOCXEvents_KeyPressEventHandler(this._WMPObject_KeyPressEvent);
+            this._WMPObject.KeyUpEvent += new AxWMPLib._WMPOCXEvents_KeyUpEventHandler(this._WMPObject_KeyUpEvent);
             // 
             // splitContainer1
             // 
@@ -128,8 +132,8 @@
             // splitContainer1.Panel2
             // 
             this.splitContainer1.Panel2.Controls.Add(this._Tab_Editor);
-            this.splitContainer1.Size = new System.Drawing.Size(1183, 406);
-            this.splitContainer1.SplitterDistance = 511;
+            this.splitContainer1.Size = new System.Drawing.Size(1693, 711);
+            this.splitContainer1.SplitterDistance = 731;
             this.splitContainer1.TabIndex = 2;
             // 
             // splitContainer2
@@ -146,8 +150,8 @@
             // splitContainer2.Panel2
             // 
             this.splitContainer2.Panel2.Controls.Add(this.splitContainer3);
-            this.splitContainer2.Size = new System.Drawing.Size(511, 406);
-            this.splitContainer2.SplitterDistance = 213;
+            this.splitContainer2.Size = new System.Drawing.Size(731, 711);
+            this.splitContainer2.SplitterDistance = 373;
             this.splitContainer2.TabIndex = 0;
             // 
             // splitContainer3
@@ -175,8 +179,8 @@
             // splitContainer3.Panel2
             // 
             this.splitContainer3.Panel2.Controls.Add(this._SubViewer);
-            this.splitContainer3.Size = new System.Drawing.Size(511, 189);
-            this.splitContainer3.SplitterDistance = 57;
+            this.splitContainer3.Size = new System.Drawing.Size(731, 334);
+            this.splitContainer3.SplitterDistance = 100;
             this.splitContainer3.TabIndex = 2;
             // 
             // _Label_StartFrameIndex
@@ -309,7 +313,7 @@
             this._SubViewer.MinimumSize = new System.Drawing.Size(20, 20);
             this._SubViewer.Name = "_SubViewer";
             this._SubViewer.ScrollBarsEnabled = false;
-            this._SubViewer.Size = new System.Drawing.Size(505, 120);
+            this._SubViewer.Size = new System.Drawing.Size(725, 222);
             this._SubViewer.TabIndex = 1;
             // 
             // _Tab_Editor
@@ -322,7 +326,7 @@
             this._Tab_Editor.Location = new System.Drawing.Point(3, 3);
             this._Tab_Editor.Name = "_Tab_Editor";
             this._Tab_Editor.SelectedIndex = 0;
-            this._Tab_Editor.Size = new System.Drawing.Size(660, 400);
+            this._Tab_Editor.Size = new System.Drawing.Size(950, 705);
             this._Tab_Editor.TabIndex = 1;
             // 
             // _TabPage_Work
@@ -331,7 +335,7 @@
             this._TabPage_Work.Location = new System.Drawing.Point(4, 22);
             this._TabPage_Work.Name = "_TabPage_Work";
             this._TabPage_Work.Padding = new System.Windows.Forms.Padding(3);
-            this._TabPage_Work.Size = new System.Drawing.Size(652, 374);
+            this._TabPage_Work.Size = new System.Drawing.Size(942, 679);
             this._TabPage_Work.TabIndex = 0;
             this._TabPage_Work.Text = "작업";
             this._TabPage_Work.UseVisualStyleBackColor = true;
@@ -345,14 +349,15 @@
             this._GridView_Work.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this._GridView_Work.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this._GridView_Work.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this._GridView_Time,
+            this._GridView_Frame,
+            this._GridView_T,
             this._GridView_Text});
             this._GridView_Work.Location = new System.Drawing.Point(3, 6);
             this._GridView_Work.MultiSelect = false;
             this._GridView_Work.Name = "_GridView_Work";
             this._GridView_Work.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this._GridView_Work.RowTemplate.Height = 23;
-            this._GridView_Work.Size = new System.Drawing.Size(644, 362);
+            this._GridView_Work.Size = new System.Drawing.Size(934, 667);
             this._GridView_Work.TabIndex = 0;
             this._GridView_Work.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this._GridView_Work_CellEndEdit);
             this._GridView_Work.CellValidated += new System.Windows.Forms.DataGridViewCellEventHandler(this._GridView_Work_CellValidated);
@@ -360,12 +365,18 @@
             this._GridView_Work.UserDeletingRow += new System.Windows.Forms.DataGridViewRowCancelEventHandler(this._GridView_Work_UserDeletingRow);
             this._GridView_Work.KeyDown += new System.Windows.Forms.KeyEventHandler(this._GridView_Work_KeyDown);
             // 
-            // _GridView_Time
+            // _GridView_Frame
             // 
-            this._GridView_Time.FillWeight = 35.97122F;
-            this._GridView_Time.HeaderText = "시간";
-            this._GridView_Time.Name = "_GridView_Time";
-            this._GridView_Time.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this._GridView_Frame.FillWeight = 35.97122F;
+            this._GridView_Frame.HeaderText = "프레임";
+            this._GridView_Frame.Name = "_GridView_Frame";
+            this._GridView_Frame.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // _GridView_T
+            // 
+            this._GridView_T.HeaderText = "시간";
+            this._GridView_T.Name = "_GridView_T";
+            this._GridView_T.ReadOnly = true;
             // 
             // _GridView_Text
             // 
@@ -380,7 +391,7 @@
             this._TabPage_Source.Location = new System.Drawing.Point(4, 22);
             this._TabPage_Source.Name = "_TabPage_Source";
             this._TabPage_Source.Padding = new System.Windows.Forms.Padding(3);
-            this._TabPage_Source.Size = new System.Drawing.Size(652, 374);
+            this._TabPage_Source.Size = new System.Drawing.Size(942, 679);
             this._TabPage_Source.TabIndex = 1;
             this._TabPage_Source.Text = "소스";
             this._TabPage_Source.UseVisualStyleBackColor = true;
@@ -410,7 +421,7 @@
             this._HelpMenu});
             this._MainMenuStrip.Location = new System.Drawing.Point(0, 0);
             this._MainMenuStrip.Name = "_MainMenuStrip";
-            this._MainMenuStrip.Size = new System.Drawing.Size(1207, 24);
+            this._MainMenuStrip.Size = new System.Drawing.Size(1717, 24);
             this._MainMenuStrip.TabIndex = 3;
             this._MainMenuStrip.Text = "menuStrip1";
             // 
@@ -551,7 +562,7 @@
             // _ToolMenuItem_OpenDirectory
             // 
             this._ToolMenuItem_OpenDirectory.Name = "_ToolMenuItem_OpenDirectory";
-            this._ToolMenuItem_OpenDirectory.Size = new System.Drawing.Size(152, 22);
+            this._ToolMenuItem_OpenDirectory.Size = new System.Drawing.Size(126, 22);
             this._ToolMenuItem_OpenDirectory.Text = "폴더 열기";
             this._ToolMenuItem_OpenDirectory.Click += new System.EventHandler(this._ToolMenuItem_OpenDirectory_Click);
             // 
@@ -566,7 +577,7 @@
             // _HelpMenuItem_Developer
             // 
             this._HelpMenuItem_Developer.Name = "_HelpMenuItem_Developer";
-            this._HelpMenuItem_Developer.Size = new System.Drawing.Size(152, 22);
+            this._HelpMenuItem_Developer.Size = new System.Drawing.Size(126, 22);
             this._HelpMenuItem_Developer.Text = "만든 사람";
             this._HelpMenuItem_Developer.Click += new System.EventHandler(this._HelpMenuItem_Developer_Click);
             // 
@@ -585,9 +596,9 @@
             this._StatusStrip.ImageScalingSize = new System.Drawing.Size(24, 24);
             this._StatusStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this._ToolStripStatusLabel});
-            this._StatusStrip.Location = new System.Drawing.Point(0, 436);
+            this._StatusStrip.Location = new System.Drawing.Point(0, 741);
             this._StatusStrip.Name = "_StatusStrip";
-            this._StatusStrip.Size = new System.Drawing.Size(1207, 22);
+            this._StatusStrip.Size = new System.Drawing.Size(1717, 22);
             this._StatusStrip.TabIndex = 4;
             this._StatusStrip.Text = "statusStrip1";
             // 
@@ -610,7 +621,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1207, 458);
+            this.ClientSize = new System.Drawing.Size(1717, 763);
             this.Controls.Add(this._StatusStrip);
             this.Controls.Add(this.splitContainer1);
             this.Controls.Add(this._MainMenuStrip);
@@ -678,8 +689,6 @@
         private System.Windows.Forms.TabPage _TabPage_Work;
         private System.Windows.Forms.DataGridView _GridView_Work;
         private System.Windows.Forms.TabPage _TabPage_Source;
-        private System.Windows.Forms.DataGridViewTextBoxColumn _GridView_Time;
-        private System.Windows.Forms.DataGridViewTextBoxColumn _GridView_Text;
         private System.Windows.Forms.SplitContainer splitContainer3;
         private System.Windows.Forms.TextBox _TextBox_RInterval;
         private System.Windows.Forms.Label _Label_RInterval;
@@ -699,6 +708,9 @@
         private System.Windows.Forms.TextBox _TextBox_WInterval;
         private System.Windows.Forms.Label _Label_StartFrameIndex;
         private System.Windows.Forms.TextBox _TextBox_StartFrameIndex;
+        private System.Windows.Forms.DataGridViewTextBoxColumn _GridView_Frame;
+        private System.Windows.Forms.DataGridViewTextBoxColumn _GridView_T;
+        private System.Windows.Forms.DataGridViewTextBoxColumn _GridView_Text;
     }
 }
 
