@@ -25,7 +25,7 @@ namespace HandySubtitler
         /// Q 버튼에 대한 루틴입니다.
         /// </summary>
         /// <param name="shift">쉬프트 키가 눌려있는지를 표현합니다.</param>
-        void RoutineQ(bool shift)
+        void RoutineCQ(bool shift)
         {
             if (shift)
             {
@@ -43,7 +43,7 @@ namespace HandySubtitler
         /// W 버튼에 대한 루틴입니다.
         /// </summary>
         /// <param name="shift">쉬프트 키가 눌려있는지를 표현합니다.</param>
-        void RoutineW(bool shift)
+        void RoutineCW(bool shift)
         {
             if (shift)
             {
@@ -60,7 +60,7 @@ namespace HandySubtitler
         /// E 버튼에 대한 루틴입니다.
         /// </summary>
         /// <param name="shift">쉬프트 키가 눌려있는지를 표현합니다.</param>
-        void RoutineE(bool shift)
+        void RoutineCE(bool shift)
         {
             if (shift)
             {
@@ -77,7 +77,7 @@ namespace HandySubtitler
         /// R 버튼에 대한 루틴입니다.
         /// </summary>
         /// <param name="shift">쉬프트 키가 눌려있는지를 표현합니다.</param>
-        void RoutineR(bool shift)
+        void RoutineCR(bool shift)
         {
             if (shift)
             {
@@ -94,7 +94,7 @@ namespace HandySubtitler
         /// T 버튼에 대한 루틴입니다.
         /// </summary>
         /// <param name="shift">쉬프트 키가 눌려있는지를 표현합니다.</param>
-        void RoutineT(bool shift)
+        void RoutineCT(bool shift)
         {
             if (WMP_IsPlaying())
             {

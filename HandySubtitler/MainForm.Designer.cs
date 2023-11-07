@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
-            this._WMPObject = new AxWMPLib.AxWindowsMediaPlayer();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.splitContainer2 = new System.Windows.Forms.SplitContainer();
             this.splitContainer3 = new System.Windows.Forms.SplitContainer();
@@ -70,19 +69,56 @@
             this._EditMenu = new System.Windows.Forms.ToolStripMenuItem();
             this._EditMenuItem_Undo = new System.Windows.Forms.ToolStripMenuItem();
             this._EditMenuItem_Redo = new System.Windows.Forms.ToolStripMenuItem();
+            this.재생ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.정지ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this._ToolMenu = new System.Windows.Forms.ToolStripMenuItem();
             this._ToolMenuItem_OpenDirectory = new System.Windows.Forms.ToolStripMenuItem();
             this._HelpMenu = new System.Windows.Forms.ToolStripMenuItem();
             this._HelpMenuItem_Developer = new System.Windows.Forms.ToolStripMenuItem();
+            this.단축키ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.행동QToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.skqToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.skcqToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.sksqToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.skcsqToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.행동WToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.skwToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.skcwToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.skswToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.skcswToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.행동EToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.skeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.skceToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.skseToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.skcseToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.행동RToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.skrToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.skcrToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.sksrToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.skcsrToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.행동TToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.sktToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.skctToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.skstToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.skcstToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.행동AToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.행동SToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.행동DToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.행동FToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.행동GToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this._OpenSubtitleDialog = new System.Windows.Forms.OpenFileDialog();
             this._SaveFileDialog = new System.Windows.Forms.SaveFileDialog();
             this._StatusStrip = new System.Windows.Forms.StatusStrip();
             this._ToolStripStatusLabel = new System.Windows.Forms.ToolStripStatusLabel();
             this._OpenMediaDialog = new System.Windows.Forms.OpenFileDialog();
             this._SaveSmiDialog = new System.Windows.Forms.SaveFileDialog();
-            this.재생ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.정지ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            ((System.ComponentModel.ISupportInitialize)(this._WMPObject)).BeginInit();
+            this.sksToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.skcsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.skssToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.skcssToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this._WMPObject = new AxWMPLib.AxWindowsMediaPlayer();
+            this.재생ToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.일시정지ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -101,23 +137,8 @@
             this._TabPage_Source.SuspendLayout();
             this._MainMenuStrip.SuspendLayout();
             this._StatusStrip.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this._WMPObject)).BeginInit();
             this.SuspendLayout();
-            // 
-            // _WMPObject
-            // 
-            this._WMPObject.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this._WMPObject.Enabled = true;
-            this._WMPObject.Location = new System.Drawing.Point(3, 3);
-            this._WMPObject.Name = "_WMPObject";
-            this._WMPObject.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("_WMPObject.OcxState")));
-            this._WMPObject.Size = new System.Drawing.Size(725, 367);
-            this._WMPObject.TabIndex = 0;
-            this._WMPObject.PositionChange += new AxWMPLib._WMPOCXEvents_PositionChangeEventHandler(this._WMPObject_PositionChange);
-            this._WMPObject.KeyDownEvent += new AxWMPLib._WMPOCXEvents_KeyDownEventHandler(this._WMPObject_KeyDownEvent);
-            this._WMPObject.KeyPressEvent += new AxWMPLib._WMPOCXEvents_KeyPressEventHandler(this._WMPObject_KeyPressEvent);
-            this._WMPObject.KeyUpEvent += new AxWMPLib._WMPOCXEvents_KeyUpEventHandler(this._WMPObject_KeyUpEvent);
             // 
             // splitContainer1
             // 
@@ -421,7 +442,8 @@
             this._EditMenu,
             this.재생ToolStripMenuItem,
             this._ToolMenu,
-            this._HelpMenu});
+            this._HelpMenu,
+            this.단축키ToolStripMenuItem});
             this._MainMenuStrip.Location = new System.Drawing.Point(0, 0);
             this._MainMenuStrip.Name = "_MainMenuStrip";
             this._MainMenuStrip.Size = new System.Drawing.Size(1717, 24);
@@ -554,6 +576,25 @@
             this._EditMenuItem_Redo.Text = "다시 실행";
             this._EditMenuItem_Redo.Click += new System.EventHandler(this._EditMenuItem_Redo_Click);
             // 
+            // 재생ToolStripMenuItem
+            // 
+            this.재생ToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.재생ToolStripMenuItem1,
+            this.일시정지ToolStripMenuItem,
+            this.정지ToolStripMenuItem});
+            this.재생ToolStripMenuItem.Name = "재생ToolStripMenuItem";
+            this.재생ToolStripMenuItem.Size = new System.Drawing.Size(43, 20);
+            this.재생ToolStripMenuItem.Text = "재생";
+            // 
+            // 정지ToolStripMenuItem
+            // 
+            this.정지ToolStripMenuItem.Name = "정지ToolStripMenuItem";
+            this.정지ToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift) 
+            | System.Windows.Forms.Keys.X)));
+            this.정지ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.정지ToolStripMenuItem.Text = "정지";
+            this.정지ToolStripMenuItem.Click += new System.EventHandler(this.정지ToolStripMenuItem_Click);
+            // 
             // _ToolMenu
             // 
             this._ToolMenu.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -565,7 +606,7 @@
             // _ToolMenuItem_OpenDirectory
             // 
             this._ToolMenuItem_OpenDirectory.Name = "_ToolMenuItem_OpenDirectory";
-            this._ToolMenuItem_OpenDirectory.Size = new System.Drawing.Size(126, 22);
+            this._ToolMenuItem_OpenDirectory.Size = new System.Drawing.Size(180, 22);
             this._ToolMenuItem_OpenDirectory.Text = "폴더 열기";
             this._ToolMenuItem_OpenDirectory.Click += new System.EventHandler(this._ToolMenuItem_OpenDirectory_Click);
             // 
@@ -580,9 +621,272 @@
             // _HelpMenuItem_Developer
             // 
             this._HelpMenuItem_Developer.Name = "_HelpMenuItem_Developer";
-            this._HelpMenuItem_Developer.Size = new System.Drawing.Size(126, 22);
+            this._HelpMenuItem_Developer.ShortcutKeys = System.Windows.Forms.Keys.F1;
+            this._HelpMenuItem_Developer.Size = new System.Drawing.Size(180, 22);
             this._HelpMenuItem_Developer.Text = "만든 사람";
             this._HelpMenuItem_Developer.Click += new System.EventHandler(this._HelpMenuItem_Developer_Click);
+            // 
+            // 단축키ToolStripMenuItem
+            // 
+            this.단축키ToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.행동QToolStripMenuItem,
+            this.행동WToolStripMenuItem,
+            this.행동EToolStripMenuItem,
+            this.행동RToolStripMenuItem,
+            this.행동TToolStripMenuItem,
+            this.행동AToolStripMenuItem,
+            this.행동SToolStripMenuItem,
+            this.행동DToolStripMenuItem,
+            this.행동FToolStripMenuItem,
+            this.행동GToolStripMenuItem});
+            this.단축키ToolStripMenuItem.Name = "단축키ToolStripMenuItem";
+            this.단축키ToolStripMenuItem.Size = new System.Drawing.Size(55, 20);
+            this.단축키ToolStripMenuItem.Text = "단축키";
+            // 
+            // 행동QToolStripMenuItem
+            // 
+            this.행동QToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.skqToolStripMenuItem,
+            this.skcqToolStripMenuItem,
+            this.sksqToolStripMenuItem,
+            this.skcsqToolStripMenuItem});
+            this.행동QToolStripMenuItem.Name = "행동QToolStripMenuItem";
+            this.행동QToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.행동QToolStripMenuItem.Text = "행동Q";
+            // 
+            // skqToolStripMenuItem
+            // 
+            this.skqToolStripMenuItem.Name = "skqToolStripMenuItem";
+            this.skqToolStripMenuItem.Size = new System.Drawing.Size(184, 22);
+            this.skqToolStripMenuItem.Text = "sk_q";
+            this.skqToolStripMenuItem.Click += new System.EventHandler(this.skqToolStripMenuItem_Click);
+            // 
+            // skcqToolStripMenuItem
+            // 
+            this.skcqToolStripMenuItem.Name = "skcqToolStripMenuItem";
+            this.skcqToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Q)));
+            this.skcqToolStripMenuItem.Size = new System.Drawing.Size(184, 22);
+            this.skcqToolStripMenuItem.Text = "sk_cq";
+            this.skcqToolStripMenuItem.Click += new System.EventHandler(this.skcqToolStripMenuItem_Click);
+            // 
+            // sksqToolStripMenuItem
+            // 
+            this.sksqToolStripMenuItem.Name = "sksqToolStripMenuItem";
+            this.sksqToolStripMenuItem.Size = new System.Drawing.Size(184, 22);
+            this.sksqToolStripMenuItem.Text = "sk_sq";
+            this.sksqToolStripMenuItem.Click += new System.EventHandler(this.sksqToolStripMenuItem_Click);
+            // 
+            // skcsqToolStripMenuItem
+            // 
+            this.skcsqToolStripMenuItem.Name = "skcsqToolStripMenuItem";
+            this.skcsqToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift) 
+            | System.Windows.Forms.Keys.Q)));
+            this.skcsqToolStripMenuItem.Size = new System.Drawing.Size(184, 22);
+            this.skcsqToolStripMenuItem.Text = "sk_csq";
+            this.skcsqToolStripMenuItem.Click += new System.EventHandler(this.skcsqToolStripMenuItem_Click);
+            // 
+            // 행동WToolStripMenuItem
+            // 
+            this.행동WToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.skwToolStripMenuItem,
+            this.skcwToolStripMenuItem,
+            this.skswToolStripMenuItem,
+            this.skcswToolStripMenuItem});
+            this.행동WToolStripMenuItem.Name = "행동WToolStripMenuItem";
+            this.행동WToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.행동WToolStripMenuItem.Text = "행동W";
+            // 
+            // skwToolStripMenuItem
+            // 
+            this.skwToolStripMenuItem.Name = "skwToolStripMenuItem";
+            this.skwToolStripMenuItem.Size = new System.Drawing.Size(188, 22);
+            this.skwToolStripMenuItem.Text = "sk_w";
+            this.skwToolStripMenuItem.Click += new System.EventHandler(this.skwToolStripMenuItem_Click);
+            // 
+            // skcwToolStripMenuItem
+            // 
+            this.skcwToolStripMenuItem.Name = "skcwToolStripMenuItem";
+            this.skcwToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.W)));
+            this.skcwToolStripMenuItem.Size = new System.Drawing.Size(188, 22);
+            this.skcwToolStripMenuItem.Text = "sk_cw";
+            this.skcwToolStripMenuItem.Click += new System.EventHandler(this.skcwToolStripMenuItem_Click);
+            // 
+            // skswToolStripMenuItem
+            // 
+            this.skswToolStripMenuItem.Name = "skswToolStripMenuItem";
+            this.skswToolStripMenuItem.Size = new System.Drawing.Size(188, 22);
+            this.skswToolStripMenuItem.Text = "sk_sw";
+            this.skswToolStripMenuItem.Click += new System.EventHandler(this.skswToolStripMenuItem_Click);
+            // 
+            // skcswToolStripMenuItem
+            // 
+            this.skcswToolStripMenuItem.Name = "skcswToolStripMenuItem";
+            this.skcswToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift) 
+            | System.Windows.Forms.Keys.W)));
+            this.skcswToolStripMenuItem.Size = new System.Drawing.Size(188, 22);
+            this.skcswToolStripMenuItem.Text = "sk_csw";
+            this.skcswToolStripMenuItem.Click += new System.EventHandler(this.skcswToolStripMenuItem_Click);
+            // 
+            // 행동EToolStripMenuItem
+            // 
+            this.행동EToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.skeToolStripMenuItem,
+            this.skceToolStripMenuItem,
+            this.skseToolStripMenuItem,
+            this.skcseToolStripMenuItem});
+            this.행동EToolStripMenuItem.Name = "행동EToolStripMenuItem";
+            this.행동EToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.행동EToolStripMenuItem.Text = "행동E";
+            // 
+            // skeToolStripMenuItem
+            // 
+            this.skeToolStripMenuItem.Name = "skeToolStripMenuItem";
+            this.skeToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.skeToolStripMenuItem.Text = "sk_e";
+            this.skeToolStripMenuItem.Click += new System.EventHandler(this.skeToolStripMenuItem_Click);
+            // 
+            // skceToolStripMenuItem
+            // 
+            this.skceToolStripMenuItem.Name = "skceToolStripMenuItem";
+            this.skceToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.E)));
+            this.skceToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.skceToolStripMenuItem.Text = "sk_ce";
+            this.skceToolStripMenuItem.Click += new System.EventHandler(this.skceToolStripMenuItem_Click);
+            // 
+            // skseToolStripMenuItem
+            // 
+            this.skseToolStripMenuItem.Name = "skseToolStripMenuItem";
+            this.skseToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.skseToolStripMenuItem.Text = "sk_se";
+            this.skseToolStripMenuItem.Click += new System.EventHandler(this.skseToolStripMenuItem_Click);
+            // 
+            // skcseToolStripMenuItem
+            // 
+            this.skcseToolStripMenuItem.Name = "skcseToolStripMenuItem";
+            this.skcseToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift) 
+            | System.Windows.Forms.Keys.E)));
+            this.skcseToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.skcseToolStripMenuItem.Text = "sk_cse";
+            this.skcseToolStripMenuItem.Click += new System.EventHandler(this.skcseToolStripMenuItem_Click);
+            // 
+            // 행동RToolStripMenuItem
+            // 
+            this.행동RToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.skrToolStripMenuItem,
+            this.skcrToolStripMenuItem,
+            this.sksrToolStripMenuItem,
+            this.skcsrToolStripMenuItem});
+            this.행동RToolStripMenuItem.Name = "행동RToolStripMenuItem";
+            this.행동RToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.행동RToolStripMenuItem.Text = "행동R";
+            // 
+            // skrToolStripMenuItem
+            // 
+            this.skrToolStripMenuItem.Name = "skrToolStripMenuItem";
+            this.skrToolStripMenuItem.Size = new System.Drawing.Size(179, 22);
+            this.skrToolStripMenuItem.Text = "sk_r";
+            this.skrToolStripMenuItem.Click += new System.EventHandler(this.skrToolStripMenuItem_Click);
+            // 
+            // skcrToolStripMenuItem
+            // 
+            this.skcrToolStripMenuItem.Name = "skcrToolStripMenuItem";
+            this.skcrToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.R)));
+            this.skcrToolStripMenuItem.Size = new System.Drawing.Size(179, 22);
+            this.skcrToolStripMenuItem.Text = "sk_cr";
+            this.skcrToolStripMenuItem.Click += new System.EventHandler(this.skcrToolStripMenuItem_Click);
+            // 
+            // sksrToolStripMenuItem
+            // 
+            this.sksrToolStripMenuItem.Name = "sksrToolStripMenuItem";
+            this.sksrToolStripMenuItem.Size = new System.Drawing.Size(179, 22);
+            this.sksrToolStripMenuItem.Text = "sk_sr";
+            this.sksrToolStripMenuItem.Click += new System.EventHandler(this.sksrToolStripMenuItem_Click);
+            // 
+            // skcsrToolStripMenuItem
+            // 
+            this.skcsrToolStripMenuItem.Name = "skcsrToolStripMenuItem";
+            this.skcsrToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift) 
+            | System.Windows.Forms.Keys.R)));
+            this.skcsrToolStripMenuItem.Size = new System.Drawing.Size(179, 22);
+            this.skcsrToolStripMenuItem.Text = "sk_csr";
+            this.skcsrToolStripMenuItem.Click += new System.EventHandler(this.skcsrToolStripMenuItem_Click);
+            // 
+            // 행동TToolStripMenuItem
+            // 
+            this.행동TToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.sktToolStripMenuItem,
+            this.skctToolStripMenuItem,
+            this.skstToolStripMenuItem,
+            this.skcstToolStripMenuItem});
+            this.행동TToolStripMenuItem.Name = "행동TToolStripMenuItem";
+            this.행동TToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.행동TToolStripMenuItem.Text = "행동T";
+            // 
+            // sktToolStripMenuItem
+            // 
+            this.sktToolStripMenuItem.Name = "sktToolStripMenuItem";
+            this.sktToolStripMenuItem.Size = new System.Drawing.Size(178, 22);
+            this.sktToolStripMenuItem.Text = "sk_t";
+            this.sktToolStripMenuItem.Click += new System.EventHandler(this.sktToolStripMenuItem_Click);
+            // 
+            // skctToolStripMenuItem
+            // 
+            this.skctToolStripMenuItem.Name = "skctToolStripMenuItem";
+            this.skctToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.T)));
+            this.skctToolStripMenuItem.Size = new System.Drawing.Size(178, 22);
+            this.skctToolStripMenuItem.Text = "sk_ct";
+            this.skctToolStripMenuItem.Click += new System.EventHandler(this.skctToolStripMenuItem_Click);
+            // 
+            // skstToolStripMenuItem
+            // 
+            this.skstToolStripMenuItem.Name = "skstToolStripMenuItem";
+            this.skstToolStripMenuItem.Size = new System.Drawing.Size(178, 22);
+            this.skstToolStripMenuItem.Text = "sk_st";
+            this.skstToolStripMenuItem.Click += new System.EventHandler(this.skstToolStripMenuItem_Click);
+            // 
+            // skcstToolStripMenuItem
+            // 
+            this.skcstToolStripMenuItem.Name = "skcstToolStripMenuItem";
+            this.skcstToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift) 
+            | System.Windows.Forms.Keys.T)));
+            this.skcstToolStripMenuItem.Size = new System.Drawing.Size(178, 22);
+            this.skcstToolStripMenuItem.Text = "sk_cst";
+            this.skcstToolStripMenuItem.Click += new System.EventHandler(this.skcstToolStripMenuItem_Click);
+            // 
+            // 행동AToolStripMenuItem
+            // 
+            this.행동AToolStripMenuItem.Name = "행동AToolStripMenuItem";
+            this.행동AToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.행동AToolStripMenuItem.Text = "행동A";
+            // 
+            // 행동SToolStripMenuItem
+            // 
+            this.행동SToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.sksToolStripMenuItem,
+            this.skcsToolStripMenuItem,
+            this.skssToolStripMenuItem,
+            this.skcssToolStripMenuItem});
+            this.행동SToolStripMenuItem.Name = "행동SToolStripMenuItem";
+            this.행동SToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.행동SToolStripMenuItem.Text = "행동S";
+            // 
+            // 행동DToolStripMenuItem
+            // 
+            this.행동DToolStripMenuItem.Name = "행동DToolStripMenuItem";
+            this.행동DToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.행동DToolStripMenuItem.Text = "행동D";
+            // 
+            // 행동FToolStripMenuItem
+            // 
+            this.행동FToolStripMenuItem.Name = "행동FToolStripMenuItem";
+            this.행동FToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.행동FToolStripMenuItem.Text = "행동F";
+            // 
+            // 행동GToolStripMenuItem
+            // 
+            this.행동GToolStripMenuItem.Name = "행동GToolStripMenuItem";
+            this.행동GToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.행동GToolStripMenuItem.Text = "행동G";
             // 
             // _OpenSubtitleDialog
             // 
@@ -620,20 +924,61 @@
             this._SaveSmiDialog.DefaultExt = "SMI 파일 (*.smi)|*.smi";
             this._SaveSmiDialog.FileName = "subtitle.smi";
             // 
-            // 재생ToolStripMenuItem
+            // sksToolStripMenuItem
             // 
-            this.재생ToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.정지ToolStripMenuItem});
-            this.재생ToolStripMenuItem.Name = "재생ToolStripMenuItem";
-            this.재생ToolStripMenuItem.Size = new System.Drawing.Size(43, 20);
-            this.재생ToolStripMenuItem.Text = "재생";
+            this.sksToolStripMenuItem.Name = "sksToolStripMenuItem";
+            this.sksToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.sksToolStripMenuItem.Text = "sk_s";
             // 
-            // 정지ToolStripMenuItem
+            // skcsToolStripMenuItem
             // 
-            this.정지ToolStripMenuItem.Name = "정지ToolStripMenuItem";
-            this.정지ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.정지ToolStripMenuItem.Text = "정지";
-            this.정지ToolStripMenuItem.Click += new System.EventHandler(this.정지ToolStripMenuItem_Click);
+            this.skcsToolStripMenuItem.Name = "skcsToolStripMenuItem";
+            this.skcsToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.skcsToolStripMenuItem.Text = "sk_cs";
+            // 
+            // skssToolStripMenuItem
+            // 
+            this.skssToolStripMenuItem.Name = "skssToolStripMenuItem";
+            this.skssToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.skssToolStripMenuItem.Text = "sk_ss";
+            // 
+            // skcssToolStripMenuItem
+            // 
+            this.skcssToolStripMenuItem.Name = "skcssToolStripMenuItem";
+            this.skcssToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift) 
+            | System.Windows.Forms.Keys.S)));
+            this.skcssToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.skcssToolStripMenuItem.Text = "sk_css";
+            // 
+            // _WMPObject
+            // 
+            this._WMPObject.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._WMPObject.Enabled = true;
+            this._WMPObject.Location = new System.Drawing.Point(3, 3);
+            this._WMPObject.Name = "_WMPObject";
+            this._WMPObject.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("_WMPObject.OcxState")));
+            this._WMPObject.Size = new System.Drawing.Size(725, 367);
+            this._WMPObject.TabIndex = 0;
+            this._WMPObject.PositionChange += new AxWMPLib._WMPOCXEvents_PositionChangeEventHandler(this._WMPObject_PositionChange);
+            this._WMPObject.KeyDownEvent += new AxWMPLib._WMPOCXEvents_KeyDownEventHandler(this._WMPObject_KeyDownEvent);
+            this._WMPObject.KeyPressEvent += new AxWMPLib._WMPOCXEvents_KeyPressEventHandler(this._WMPObject_KeyPressEvent);
+            this._WMPObject.KeyUpEvent += new AxWMPLib._WMPOCXEvents_KeyUpEventHandler(this._WMPObject_KeyUpEvent);
+            // 
+            // 재생ToolStripMenuItem1
+            // 
+            this.재생ToolStripMenuItem1.Name = "재생ToolStripMenuItem1";
+            this.재생ToolStripMenuItem1.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.P)));
+            this.재생ToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.재생ToolStripMenuItem1.Text = "재생";
+            // 
+            // 일시정지ToolStripMenuItem
+            // 
+            this.일시정지ToolStripMenuItem.Name = "일시정지ToolStripMenuItem";
+            this.일시정지ToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.X)));
+            this.일시정지ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.일시정지ToolStripMenuItem.Text = "일시정지";
             // 
             // MainForm
             // 
@@ -649,7 +994,6 @@
             this.Text = "Handy Subtitle Editor";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MainForm_FormClosing);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.MainForm_KeyDown);
-            ((System.ComponentModel.ISupportInitialize)(this._WMPObject)).EndInit();
             this.splitContainer1.Panel1.ResumeLayout(false);
             this.splitContainer1.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
@@ -671,6 +1015,7 @@
             this._MainMenuStrip.PerformLayout();
             this._StatusStrip.ResumeLayout(false);
             this._StatusStrip.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this._WMPObject)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -731,6 +1076,43 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn _GridView_Text;
         private System.Windows.Forms.ToolStripMenuItem 재생ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 정지ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem 단축키ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem 행동QToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem 행동WToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem 행동EToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem 행동RToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem 행동TToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem 행동AToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem 행동SToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem 행동DToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem 행동FToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem 행동GToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem skqToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem skcqToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem sksqToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem skcsqToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem skwToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem skcwToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem skswToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem skcswToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem skeToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem skceToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem skseToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem skcseToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem skrToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem skcrToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem sksrToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem skcsrToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem sktToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem skctToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem skstToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem skcstToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem sksToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem skcsToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem skssToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem skcssToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem 재생ToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem 일시정지ToolStripMenuItem;
     }
 }
 

@@ -75,6 +75,9 @@
     <Compile Include="MainForm.Keys.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="MainForm.Shortcut.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="MainForm.WMP.cs">
       <SubType>Form</SubType>
     </Compile>

@@ -24,6 +24,7 @@ namespace HandySubtitler
         /// <param name="key"></param>
         void CommonEvent_KeyDown(object sender, bool control, bool shift, Keys key)
         {
+            /*
             if (control)
             {
                 switch (key)
@@ -36,6 +37,7 @@ namespace HandySubtitler
                     case Keys.X: RoutineX(shift); break;
                 }
             }
+            */
         }
 
         /// <summary>
