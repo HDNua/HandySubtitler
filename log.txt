@@ -1,3 +1,13 @@
+HandySubtitler v2.0.0.1
+
+- 이것저것 업데이트.
+
+- 혹시 모든 액션들을 핫키에 넣으면 어떨까?
+
+
+end.
+
+
 HandySubtitler v2.0.0.0
 
 - 유튜브 자막 제작을 위해 Ctrl+W / Ctrl+E 기능 변경.

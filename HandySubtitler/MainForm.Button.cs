@@ -131,6 +131,23 @@ namespace HandySubtitler
 
 
 
+        #region PlayMenu
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void 정지ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            WMP_Stop();
+        }
+
+        #endregion
+
+
+
+
+
         #region ToolMenu
         /// <summary>
         /// "작업 폴더 열기" 버튼을 클릭했습니다.

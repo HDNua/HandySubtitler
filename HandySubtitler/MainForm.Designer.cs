@@ -80,6 +80,8 @@
             this._ToolStripStatusLabel = new System.Windows.Forms.ToolStripStatusLabel();
             this._OpenMediaDialog = new System.Windows.Forms.OpenFileDialog();
             this._SaveSmiDialog = new System.Windows.Forms.SaveFileDialog();
+            this.재생ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.정지ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this._WMPObject)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
@@ -417,6 +419,7 @@
             this._MainMenuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this._FileMenu,
             this._EditMenu,
+            this.재생ToolStripMenuItem,
             this._ToolMenu,
             this._HelpMenu});
             this._MainMenuStrip.Location = new System.Drawing.Point(0, 0);
@@ -617,6 +620,21 @@
             this._SaveSmiDialog.DefaultExt = "SMI 파일 (*.smi)|*.smi";
             this._SaveSmiDialog.FileName = "subtitle.smi";
             // 
+            // 재생ToolStripMenuItem
+            // 
+            this.재생ToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.정지ToolStripMenuItem});
+            this.재생ToolStripMenuItem.Name = "재생ToolStripMenuItem";
+            this.재생ToolStripMenuItem.Size = new System.Drawing.Size(43, 20);
+            this.재생ToolStripMenuItem.Text = "재생";
+            // 
+            // 정지ToolStripMenuItem
+            // 
+            this.정지ToolStripMenuItem.Name = "정지ToolStripMenuItem";
+            this.정지ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.정지ToolStripMenuItem.Text = "정지";
+            this.정지ToolStripMenuItem.Click += new System.EventHandler(this.정지ToolStripMenuItem_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
@@ -711,6 +729,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn _GridView_Frame;
         private System.Windows.Forms.DataGridViewTextBoxColumn _GridView_T;
         private System.Windows.Forms.DataGridViewTextBoxColumn _GridView_Text;
+        private System.Windows.Forms.ToolStripMenuItem 재생ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem 정지ToolStripMenuItem;
     }
 }
 
