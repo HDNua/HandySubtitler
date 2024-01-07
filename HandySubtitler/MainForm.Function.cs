@@ -30,12 +30,12 @@ namespace HandySubtitler
             if (shift)
             {
                 WMP_Pause();
-                _TextBox_QInterval.Focus();
+                _TextBox_Interval_Q.Focus();
             }
             else
             {
                 WMP_Pause();
-                WMP_ReplayBefore(double.Parse(_TextBox_QInterval.Text));
+                WMP_ReplayBefore(double.Parse(_TextBox_Interval_Q.Text));
                 AddEmptyLine();
             }
         }
@@ -48,11 +48,11 @@ namespace HandySubtitler
             if (shift)
             {
                 WMP_Pause();
-                _TextBox_WInterval.Focus();
+                _TextBox_Interval_W.Focus();
             }
             else
             {
-                WMP_ReplayBefore(double.Parse(_TextBox_WInterval.Text));
+                WMP_ReplayBefore(double.Parse(_TextBox_Interval_W.Text));
                 AddEmptyLine();
             }
         }
@@ -65,11 +65,11 @@ namespace HandySubtitler
             if (shift)
             {
                 WMP_Pause();
-                _TextBox_EInterval.Focus();
+                _TextBox_Interval_E.Focus();
             }
             else
             {
-                WMP_ReplayBefore(double.Parse(_TextBox_EInterval.Text));
+                WMP_ReplayBefore(double.Parse(_TextBox_Interval_E.Text));
                 AddEmptyLine2();
             }
         }
@@ -82,12 +82,12 @@ namespace HandySubtitler
             if (shift)
             {
                 WMP_Pause();
-                _TextBox_RInterval.Focus();
+                _TextBox_Interval_R.Focus();
             }
             else
             {
                 WMP_Play();
-                WMP_ReplayBefore(double.Parse(_TextBox_RInterval.Text));
+                WMP_ReplayBefore(double.Parse(_TextBox_Interval_R.Text));
             }
         }
         /// <summary>

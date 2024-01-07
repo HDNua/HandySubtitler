@@ -36,14 +36,16 @@
             this._TextBox_StartFrameIndex = new System.Windows.Forms.TextBox();
             this._Label_WInterval = new System.Windows.Forms.Label();
             this._Label_EInterval = new System.Windows.Forms.Label();
-            this._TextBox_EInterval = new System.Windows.Forms.TextBox();
-            this._TextBox_WInterval = new System.Windows.Forms.TextBox();
+            this._TextBox_Interval_E = new System.Windows.Forms.TextBox();
+            this._TextBox_Interval_W = new System.Windows.Forms.TextBox();
             this._Label_FrameIndex = new System.Windows.Forms.Label();
             this._TextBox_FrameIndex = new System.Windows.Forms.TextBox();
             this._Label_QInterval = new System.Windows.Forms.Label();
-            this._TextBox_QInterval = new System.Windows.Forms.TextBox();
+            this._TextBox_Interval_Q = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this._Label_RInterval = new System.Windows.Forms.Label();
-            this._TextBox_RInterval = new System.Windows.Forms.TextBox();
+            this._TextBox_Interval_T = new System.Windows.Forms.TextBox();
+            this._TextBox_Interval_R = new System.Windows.Forms.TextBox();
             this._SubViewer = new System.Windows.Forms.WebBrowser();
             this._Tab_Editor = new System.Windows.Forms.TabControl();
             this._TabPage_Work = new System.Windows.Forms.TabPage();
@@ -70,6 +72,8 @@
             this._EditMenuItem_Undo = new System.Windows.Forms.ToolStripMenuItem();
             this._EditMenuItem_Redo = new System.Windows.Forms.ToolStripMenuItem();
             this.재생ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.재생ToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.일시정지ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.정지ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this._ToolMenu = new System.Windows.Forms.ToolStripMenuItem();
             this._ToolMenuItem_OpenDirectory = new System.Windows.Forms.ToolStripMenuItem();
@@ -103,6 +107,10 @@
             this.skcstToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.행동AToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.행동SToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.sksToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.skcsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.skssToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.skcssToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.행동DToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.행동FToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.행동GToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -112,13 +120,8 @@
             this._ToolStripStatusLabel = new System.Windows.Forms.ToolStripStatusLabel();
             this._OpenMediaDialog = new System.Windows.Forms.OpenFileDialog();
             this._SaveSmiDialog = new System.Windows.Forms.SaveFileDialog();
-            this.sksToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.skcsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.skssToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.skcssToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this._WMPObject = new AxWMPLib.AxWindowsMediaPlayer();
-            this.재생ToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.일시정지ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -190,14 +193,17 @@
             this.splitContainer3.Panel1.Controls.Add(this._TextBox_StartFrameIndex);
             this.splitContainer3.Panel1.Controls.Add(this._Label_WInterval);
             this.splitContainer3.Panel1.Controls.Add(this._Label_EInterval);
-            this.splitContainer3.Panel1.Controls.Add(this._TextBox_EInterval);
-            this.splitContainer3.Panel1.Controls.Add(this._TextBox_WInterval);
+            this.splitContainer3.Panel1.Controls.Add(this._TextBox_Interval_E);
+            this.splitContainer3.Panel1.Controls.Add(this._TextBox_Interval_W);
             this.splitContainer3.Panel1.Controls.Add(this._Label_FrameIndex);
             this.splitContainer3.Panel1.Controls.Add(this._TextBox_FrameIndex);
             this.splitContainer3.Panel1.Controls.Add(this._Label_QInterval);
-            this.splitContainer3.Panel1.Controls.Add(this._TextBox_QInterval);
+            this.splitContainer3.Panel1.Controls.Add(this.textBox1);
+            this.splitContainer3.Panel1.Controls.Add(this._TextBox_Interval_Q);
+            this.splitContainer3.Panel1.Controls.Add(this.label1);
             this.splitContainer3.Panel1.Controls.Add(this._Label_RInterval);
-            this.splitContainer3.Panel1.Controls.Add(this._TextBox_RInterval);
+            this.splitContainer3.Panel1.Controls.Add(this._TextBox_Interval_T);
+            this.splitContainer3.Panel1.Controls.Add(this._TextBox_Interval_R);
             // 
             // splitContainer3.Panel2
             // 
@@ -244,27 +250,27 @@
             this._Label_EInterval.TabIndex = 8;
             this._Label_EInterval.Text = "E";
             // 
-            // _TextBox_EInterval
+            // _TextBox_Interval_E
             // 
-            this._TextBox_EInterval.Location = new System.Drawing.Point(401, 5);
-            this._TextBox_EInterval.Name = "_TextBox_EInterval";
-            this._TextBox_EInterval.Size = new System.Drawing.Size(40, 21);
-            this._TextBox_EInterval.TabIndex = 7;
-            this._TextBox_EInterval.Text = "0.2";
-            this._TextBox_EInterval.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this._TextBox_EInterval.KeyDown += new System.Windows.Forms.KeyEventHandler(this._TextBox_EInterval_KeyDown);
-            this._TextBox_EInterval.Validating += new System.ComponentModel.CancelEventHandler(this._TextBox_EInterval_Validating);
+            this._TextBox_Interval_E.Location = new System.Drawing.Point(401, 5);
+            this._TextBox_Interval_E.Name = "_TextBox_Interval_E";
+            this._TextBox_Interval_E.Size = new System.Drawing.Size(40, 21);
+            this._TextBox_Interval_E.TabIndex = 7;
+            this._TextBox_Interval_E.Text = "0.2";
+            this._TextBox_Interval_E.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this._TextBox_Interval_E.KeyDown += new System.Windows.Forms.KeyEventHandler(this._TextBox_EInterval_KeyDown);
+            this._TextBox_Interval_E.Validating += new System.ComponentModel.CancelEventHandler(this._TextBox_EInterval_Validating);
             // 
-            // _TextBox_WInterval
+            // _TextBox_Interval_W
             // 
-            this._TextBox_WInterval.Location = new System.Drawing.Point(336, 5);
-            this._TextBox_WInterval.Name = "_TextBox_WInterval";
-            this._TextBox_WInterval.Size = new System.Drawing.Size(40, 21);
-            this._TextBox_WInterval.TabIndex = 6;
-            this._TextBox_WInterval.Text = "0.2";
-            this._TextBox_WInterval.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this._TextBox_WInterval.KeyDown += new System.Windows.Forms.KeyEventHandler(this._TextBox_WInterval_KeyDown);
-            this._TextBox_WInterval.Validating += new System.ComponentModel.CancelEventHandler(this._TextBox_WInterval_Validating);
+            this._TextBox_Interval_W.Location = new System.Drawing.Point(336, 5);
+            this._TextBox_Interval_W.Name = "_TextBox_Interval_W";
+            this._TextBox_Interval_W.Size = new System.Drawing.Size(40, 21);
+            this._TextBox_Interval_W.TabIndex = 6;
+            this._TextBox_Interval_W.Text = "0.2";
+            this._TextBox_Interval_W.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this._TextBox_Interval_W.KeyDown += new System.Windows.Forms.KeyEventHandler(this._TextBox_WInterval_KeyDown);
+            this._TextBox_Interval_W.Validating += new System.ComponentModel.CancelEventHandler(this._TextBox_WInterval_Validating);
             // 
             // _Label_FrameIndex
             // 
@@ -294,17 +300,26 @@
             this._Label_QInterval.TabIndex = 3;
             this._Label_QInterval.Text = "Q";
             // 
-            // _TextBox_QInterval
+            // _TextBox_Interval_Q
             // 
-            this._TextBox_QInterval.Location = new System.Drawing.Point(269, 5);
-            this._TextBox_QInterval.MaxLength = 4;
-            this._TextBox_QInterval.Name = "_TextBox_QInterval";
-            this._TextBox_QInterval.Size = new System.Drawing.Size(40, 21);
-            this._TextBox_QInterval.TabIndex = 2;
-            this._TextBox_QInterval.Text = "0.2";
-            this._TextBox_QInterval.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this._TextBox_QInterval.KeyDown += new System.Windows.Forms.KeyEventHandler(this._TextBox_QInterval_KeyDown);
-            this._TextBox_QInterval.Validating += new System.ComponentModel.CancelEventHandler(this._TextBox_QInterval_Validating);
+            this._TextBox_Interval_Q.Location = new System.Drawing.Point(269, 5);
+            this._TextBox_Interval_Q.MaxLength = 4;
+            this._TextBox_Interval_Q.Name = "_TextBox_Interval_Q";
+            this._TextBox_Interval_Q.Size = new System.Drawing.Size(40, 21);
+            this._TextBox_Interval_Q.TabIndex = 2;
+            this._TextBox_Interval_Q.Text = "0.2";
+            this._TextBox_Interval_Q.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this._TextBox_Interval_Q.KeyDown += new System.Windows.Forms.KeyEventHandler(this._TextBox_QInterval_KeyDown);
+            this._TextBox_Interval_Q.Validating += new System.ComponentModel.CancelEventHandler(this._TextBox_QInterval_Validating);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(512, 9);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(13, 12);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "T";
             // 
             // _Label_RInterval
             // 
@@ -315,17 +330,27 @@
             this._Label_RInterval.TabIndex = 1;
             this._Label_RInterval.Text = "R";
             // 
-            // _TextBox_RInterval
+            // _TextBox_Interval_T
             // 
-            this._TextBox_RInterval.Location = new System.Drawing.Point(466, 5);
-            this._TextBox_RInterval.MaxLength = 4;
-            this._TextBox_RInterval.Name = "_TextBox_RInterval";
-            this._TextBox_RInterval.Size = new System.Drawing.Size(40, 21);
-            this._TextBox_RInterval.TabIndex = 0;
-            this._TextBox_RInterval.Text = "2";
-            this._TextBox_RInterval.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this._TextBox_RInterval.KeyDown += new System.Windows.Forms.KeyEventHandler(this._TextBox_RInterval_KeyDown);
-            this._TextBox_RInterval.Validating += new System.ComponentModel.CancelEventHandler(this._TextBox_RInterval_Validating);
+            this._TextBox_Interval_T.Location = new System.Drawing.Point(531, 5);
+            this._TextBox_Interval_T.MaxLength = 4;
+            this._TextBox_Interval_T.Name = "_TextBox_Interval_T";
+            this._TextBox_Interval_T.Size = new System.Drawing.Size(40, 21);
+            this._TextBox_Interval_T.TabIndex = 0;
+            this._TextBox_Interval_T.Text = "2";
+            this._TextBox_Interval_T.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // _TextBox_Interval_R
+            // 
+            this._TextBox_Interval_R.Location = new System.Drawing.Point(466, 5);
+            this._TextBox_Interval_R.MaxLength = 4;
+            this._TextBox_Interval_R.Name = "_TextBox_Interval_R";
+            this._TextBox_Interval_R.Size = new System.Drawing.Size(40, 21);
+            this._TextBox_Interval_R.TabIndex = 0;
+            this._TextBox_Interval_R.Text = "2";
+            this._TextBox_Interval_R.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this._TextBox_Interval_R.KeyDown += new System.Windows.Forms.KeyEventHandler(this._TextBox_RInterval_KeyDown);
+            this._TextBox_Interval_R.Validating += new System.ComponentModel.CancelEventHandler(this._TextBox_RInterval_Validating);
             // 
             // _SubViewer
             // 
@@ -586,12 +611,26 @@
             this.재생ToolStripMenuItem.Size = new System.Drawing.Size(43, 20);
             this.재생ToolStripMenuItem.Text = "재생";
             // 
+            // 재생ToolStripMenuItem1
+            // 
+            this.재생ToolStripMenuItem1.Name = "재생ToolStripMenuItem1";
+            this.재생ToolStripMenuItem1.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.P)));
+            this.재생ToolStripMenuItem1.Size = new System.Drawing.Size(172, 22);
+            this.재생ToolStripMenuItem1.Text = "재생";
+            // 
+            // 일시정지ToolStripMenuItem
+            // 
+            this.일시정지ToolStripMenuItem.Name = "일시정지ToolStripMenuItem";
+            this.일시정지ToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.X)));
+            this.일시정지ToolStripMenuItem.Size = new System.Drawing.Size(172, 22);
+            this.일시정지ToolStripMenuItem.Text = "일시정지";
+            // 
             // 정지ToolStripMenuItem
             // 
             this.정지ToolStripMenuItem.Name = "정지ToolStripMenuItem";
             this.정지ToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift) 
             | System.Windows.Forms.Keys.X)));
-            this.정지ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.정지ToolStripMenuItem.Size = new System.Drawing.Size(172, 22);
             this.정지ToolStripMenuItem.Text = "정지";
             this.정지ToolStripMenuItem.Click += new System.EventHandler(this.정지ToolStripMenuItem_Click);
             // 
@@ -606,7 +645,7 @@
             // _ToolMenuItem_OpenDirectory
             // 
             this._ToolMenuItem_OpenDirectory.Name = "_ToolMenuItem_OpenDirectory";
-            this._ToolMenuItem_OpenDirectory.Size = new System.Drawing.Size(180, 22);
+            this._ToolMenuItem_OpenDirectory.Size = new System.Drawing.Size(126, 22);
             this._ToolMenuItem_OpenDirectory.Text = "폴더 열기";
             this._ToolMenuItem_OpenDirectory.Click += new System.EventHandler(this._ToolMenuItem_OpenDirectory_Click);
             // 
@@ -622,7 +661,7 @@
             // 
             this._HelpMenuItem_Developer.Name = "_HelpMenuItem_Developer";
             this._HelpMenuItem_Developer.ShortcutKeys = System.Windows.Forms.Keys.F1;
-            this._HelpMenuItem_Developer.Size = new System.Drawing.Size(180, 22);
+            this._HelpMenuItem_Developer.Size = new System.Drawing.Size(146, 22);
             this._HelpMenuItem_Developer.Text = "만든 사람";
             this._HelpMenuItem_Developer.Click += new System.EventHandler(this._HelpMenuItem_Developer_Click);
             // 
@@ -651,7 +690,7 @@
             this.sksqToolStripMenuItem,
             this.skcsqToolStripMenuItem});
             this.행동QToolStripMenuItem.Name = "행동QToolStripMenuItem";
-            this.행동QToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.행동QToolStripMenuItem.Size = new System.Drawing.Size(109, 22);
             this.행동QToolStripMenuItem.Text = "행동Q";
             // 
             // skqToolStripMenuItem
@@ -693,7 +732,7 @@
             this.skswToolStripMenuItem,
             this.skcswToolStripMenuItem});
             this.행동WToolStripMenuItem.Name = "행동WToolStripMenuItem";
-            this.행동WToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.행동WToolStripMenuItem.Size = new System.Drawing.Size(109, 22);
             this.행동WToolStripMenuItem.Text = "행동W";
             // 
             // skwToolStripMenuItem
@@ -735,7 +774,7 @@
             this.skseToolStripMenuItem,
             this.skcseToolStripMenuItem});
             this.행동EToolStripMenuItem.Name = "행동EToolStripMenuItem";
-            this.행동EToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.행동EToolStripMenuItem.Size = new System.Drawing.Size(109, 22);
             this.행동EToolStripMenuItem.Text = "행동E";
             // 
             // skeToolStripMenuItem
@@ -777,7 +816,7 @@
             this.sksrToolStripMenuItem,
             this.skcsrToolStripMenuItem});
             this.행동RToolStripMenuItem.Name = "행동RToolStripMenuItem";
-            this.행동RToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.행동RToolStripMenuItem.Size = new System.Drawing.Size(109, 22);
             this.행동RToolStripMenuItem.Text = "행동R";
             // 
             // skrToolStripMenuItem
@@ -819,7 +858,7 @@
             this.skstToolStripMenuItem,
             this.skcstToolStripMenuItem});
             this.행동TToolStripMenuItem.Name = "행동TToolStripMenuItem";
-            this.행동TToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.행동TToolStripMenuItem.Size = new System.Drawing.Size(109, 22);
             this.행동TToolStripMenuItem.Text = "행동T";
             // 
             // sktToolStripMenuItem
@@ -856,7 +895,7 @@
             // 행동AToolStripMenuItem
             // 
             this.행동AToolStripMenuItem.Name = "행동AToolStripMenuItem";
-            this.행동AToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.행동AToolStripMenuItem.Size = new System.Drawing.Size(109, 22);
             this.행동AToolStripMenuItem.Text = "행동A";
             // 
             // 행동SToolStripMenuItem
@@ -867,25 +906,51 @@
             this.skssToolStripMenuItem,
             this.skcssToolStripMenuItem});
             this.행동SToolStripMenuItem.Name = "행동SToolStripMenuItem";
-            this.행동SToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.행동SToolStripMenuItem.Size = new System.Drawing.Size(109, 22);
             this.행동SToolStripMenuItem.Text = "행동S";
+            // 
+            // sksToolStripMenuItem
+            // 
+            this.sksToolStripMenuItem.Name = "sksToolStripMenuItem";
+            this.sksToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.sksToolStripMenuItem.Text = "sk_s";
+            // 
+            // skcsToolStripMenuItem
+            // 
+            this.skcsToolStripMenuItem.Name = "skcsToolStripMenuItem";
+            this.skcsToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.skcsToolStripMenuItem.Text = "sk_cs";
+            // 
+            // skssToolStripMenuItem
+            // 
+            this.skssToolStripMenuItem.Name = "skssToolStripMenuItem";
+            this.skssToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.skssToolStripMenuItem.Text = "sk_ss";
+            // 
+            // skcssToolStripMenuItem
+            // 
+            this.skcssToolStripMenuItem.Name = "skcssToolStripMenuItem";
+            this.skcssToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift) 
+            | System.Windows.Forms.Keys.S)));
+            this.skcssToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.skcssToolStripMenuItem.Text = "sk_css";
             // 
             // 행동DToolStripMenuItem
             // 
             this.행동DToolStripMenuItem.Name = "행동DToolStripMenuItem";
-            this.행동DToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.행동DToolStripMenuItem.Size = new System.Drawing.Size(109, 22);
             this.행동DToolStripMenuItem.Text = "행동D";
             // 
             // 행동FToolStripMenuItem
             // 
             this.행동FToolStripMenuItem.Name = "행동FToolStripMenuItem";
-            this.행동FToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.행동FToolStripMenuItem.Size = new System.Drawing.Size(109, 22);
             this.행동FToolStripMenuItem.Text = "행동F";
             // 
             // 행동GToolStripMenuItem
             // 
             this.행동GToolStripMenuItem.Name = "행동GToolStripMenuItem";
-            this.행동GToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.행동GToolStripMenuItem.Size = new System.Drawing.Size(109, 22);
             this.행동GToolStripMenuItem.Text = "행동G";
             // 
             // _OpenSubtitleDialog
@@ -924,32 +989,6 @@
             this._SaveSmiDialog.DefaultExt = "SMI 파일 (*.smi)|*.smi";
             this._SaveSmiDialog.FileName = "subtitle.smi";
             // 
-            // sksToolStripMenuItem
-            // 
-            this.sksToolStripMenuItem.Name = "sksToolStripMenuItem";
-            this.sksToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.sksToolStripMenuItem.Text = "sk_s";
-            // 
-            // skcsToolStripMenuItem
-            // 
-            this.skcsToolStripMenuItem.Name = "skcsToolStripMenuItem";
-            this.skcsToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.skcsToolStripMenuItem.Text = "sk_cs";
-            // 
-            // skssToolStripMenuItem
-            // 
-            this.skssToolStripMenuItem.Name = "skssToolStripMenuItem";
-            this.skssToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.skssToolStripMenuItem.Text = "sk_ss";
-            // 
-            // skcssToolStripMenuItem
-            // 
-            this.skcssToolStripMenuItem.Name = "skcssToolStripMenuItem";
-            this.skcssToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift) 
-            | System.Windows.Forms.Keys.S)));
-            this.skcssToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.skcssToolStripMenuItem.Text = "sk_css";
-            // 
             // _WMPObject
             // 
             this._WMPObject.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -966,19 +1005,17 @@
             this._WMPObject.KeyPressEvent += new AxWMPLib._WMPOCXEvents_KeyPressEventHandler(this._WMPObject_KeyPressEvent);
             this._WMPObject.KeyUpEvent += new AxWMPLib._WMPOCXEvents_KeyUpEventHandler(this._WMPObject_KeyUpEvent);
             // 
-            // 재생ToolStripMenuItem1
+            // textBox1
             // 
-            this.재생ToolStripMenuItem1.Name = "재생ToolStripMenuItem1";
-            this.재생ToolStripMenuItem1.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.P)));
-            this.재생ToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
-            this.재생ToolStripMenuItem1.Text = "재생";
-            // 
-            // 일시정지ToolStripMenuItem
-            // 
-            this.일시정지ToolStripMenuItem.Name = "일시정지ToolStripMenuItem";
-            this.일시정지ToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.X)));
-            this.일시정지ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.일시정지ToolStripMenuItem.Text = "일시정지";
+            this.textBox1.Location = new System.Drawing.Point(269, 30);
+            this.textBox1.MaxLength = 4;
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(40, 21);
+            this.textBox1.TabIndex = 2;
+            this.textBox1.Text = "3000";
+            this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.textBox1.KeyDown += new System.Windows.Forms.KeyEventHandler(this._TextBox_QInterval_KeyDown);
+            this.textBox1.Validating += new System.ComponentModel.CancelEventHandler(this._TextBox_QInterval_Validating);
             // 
             // MainForm
             // 
@@ -1053,10 +1090,10 @@
         private System.Windows.Forms.DataGridView _GridView_Work;
         private System.Windows.Forms.TabPage _TabPage_Source;
         private System.Windows.Forms.SplitContainer splitContainer3;
-        private System.Windows.Forms.TextBox _TextBox_RInterval;
+        private System.Windows.Forms.TextBox _TextBox_Interval_R;
         private System.Windows.Forms.Label _Label_RInterval;
         private System.Windows.Forms.Label _Label_QInterval;
-        private System.Windows.Forms.TextBox _TextBox_QInterval;
+        private System.Windows.Forms.TextBox _TextBox_Interval_Q;
         private System.Windows.Forms.TextBox _TextBox_FrameIndex;
         private System.Windows.Forms.Label _Label_FrameIndex;
         private System.Windows.Forms.ToolStripMenuItem _FileMenuItem_ExportSmi;
@@ -1067,8 +1104,8 @@
         private System.Windows.Forms.SaveFileDialog _SaveSmiDialog;
         private System.Windows.Forms.Label _Label_WInterval;
         private System.Windows.Forms.Label _Label_EInterval;
-        private System.Windows.Forms.TextBox _TextBox_EInterval;
-        private System.Windows.Forms.TextBox _TextBox_WInterval;
+        private System.Windows.Forms.TextBox _TextBox_Interval_E;
+        private System.Windows.Forms.TextBox _TextBox_Interval_W;
         private System.Windows.Forms.Label _Label_StartFrameIndex;
         private System.Windows.Forms.TextBox _TextBox_StartFrameIndex;
         private System.Windows.Forms.DataGridViewTextBoxColumn _GridView_Frame;
@@ -1113,6 +1150,9 @@
         private System.Windows.Forms.ToolStripMenuItem skcssToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 재생ToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem 일시정지ToolStripMenuItem;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox _TextBox_Interval_T;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }
 

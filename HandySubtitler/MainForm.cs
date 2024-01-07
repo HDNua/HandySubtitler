@@ -8,6 +8,8 @@ using System.Diagnostics;
 using System.Text;
 using System.Linq;
 
+
+
 /// <summary>
 /// 
 /// </summary>
@@ -27,6 +29,18 @@ namespace HandySubtitler
         /// 
         /// </summary>
         const string EMPTY_LINE = "&nbsp;";
+
+        #endregion
+
+
+
+
+
+        #region 속성을 정의합니다.
+        /// <summary>
+        /// 
+        /// </summary>
+        public int INTERVAL => int.Parse(textBox1.Text);
 
         #endregion
 
@@ -314,12 +328,12 @@ namespace HandySubtitler
                 // 3초 후에 새 줄을 넣습니다.
                 GridView_InsertRow(
                     rowIndex: newRowIndex + 1,
-                    currentPosition: wmpCurrentPosition + 3,
+                    currentPosition: wmpCurrentPosition + INTERVAL / 1000.0,
                     s: EMPTY_LINE
                     );
             }
             //
-            else if (nextRowData.FrameIndex - prevRowData.FrameIndex == 3000)
+            else if (nextRowData.FrameIndex - prevRowData.FrameIndex == INTERVAL)
             {
                 var listFrameIndex = GetColumnItemsAsInt(_GridView_Work, CellIndex.FrameIndex);
                 int ri;
@@ -335,7 +349,7 @@ namespace HandySubtitler
                     nextRowData0 = GetSubLineRowData(nextRow0);
 
                     //
-                    if (nextRowData0.FrameIndex - prevRowData0.FrameIndex > 3000)
+                    if (nextRowData0.FrameIndex - prevRowData0.FrameIndex > INTERVAL)
                     {
                         break;
                     }
@@ -344,12 +358,12 @@ namespace HandySubtitler
                 // 새 줄을 넣습니다.
                 GridView_InsertRow(
                     rowIndex: ri,
-                    currentPosition: prevRowData0.FrameIndex / 1000.0 + 3,
+                    currentPosition: (prevRowData0.FrameIndex + INTERVAL) / 1000.0,
                     s: EMPTY_LINE
                     );
             }
             //
-            else if (newFrameIndex - nextRowData.FrameIndex > 3000)
+            else if (newFrameIndex - nextRowData.FrameIndex > INTERVAL)
             {
                 // 새 줄을 넣습니다.
                 GridView_InsertRow(
@@ -361,7 +375,7 @@ namespace HandySubtitler
                 // 3초 후에 새 줄을 넣습니다.
                 GridView_InsertRow(
                     rowIndex: newRowIndex + 1,
-                    currentPosition: wmpCurrentPosition + 3,
+                    currentPosition: wmpCurrentPosition + INTERVAL / 1000.0,
                     s: EMPTY_LINE
                     );
             }
@@ -390,8 +404,9 @@ namespace HandySubtitler
         /// <returns>확인 버튼이 눌렸다면 참입니다.</returns>
         bool OpenSaveConfirmDialog()
         {
-            Handy.GUI.ConfirmDialog dialog = new Handy.GUI.ConfirmDialog("파일이 저장되지 않았습니다! 저장 없이 진행합니까?");
-            return (dialog.ShowDialog() == DialogResult.OK);
+            //Handy.GUI.ConfirmDialog dialog = new Handy.GUI.ConfirmDialog("파일이 저장되지 않았습니다! 저장 없이 진행합니까?");
+            //return (dialog.ShowDialog() == DialogResult.OK);
+            return true;
         }
 
 
@@ -482,12 +497,12 @@ namespace HandySubtitler
         {
             try
             {
-                double.Parse(_TextBox_QInterval.Text);
+                double.Parse(_TextBox_Interval_Q.Text);
             }
             catch (Exception)
             {
                 /// e.Cancel = true;
-                _TextBox_QInterval.Text = _defaultQ.ToString();
+                _TextBox_Interval_Q.Text = _defaultQ.ToString();
                 Log("잘못된 Q 간격 값입니다.");
             }
         }
@@ -500,12 +515,12 @@ namespace HandySubtitler
         {
             try
             {
-                double.Parse(_TextBox_WInterval.Text);
+                double.Parse(_TextBox_Interval_W.Text);
             }
             catch (Exception)
             {
                 /// e.Cancel = true;
-                _TextBox_WInterval.Text = _defaultW.ToString();
+                _TextBox_Interval_W.Text = _defaultW.ToString();
                 Log("잘못된 W 간격 값입니다.");
             }
         }
@@ -518,12 +533,12 @@ namespace HandySubtitler
         {
             try
             {
-                double.Parse(_TextBox_EInterval.Text);
+                double.Parse(_TextBox_Interval_E.Text);
             }
             catch (Exception)
             {
                 /// e.Cancel = true;
-                _TextBox_EInterval.Text = _defaultE.ToString();
+                _TextBox_Interval_E.Text = _defaultE.ToString();
                 Log("잘못된 E 간격 값입니다.");
             }
         }
@@ -536,12 +551,12 @@ namespace HandySubtitler
         {
             try
             {
-                double.Parse(_TextBox_RInterval.Text);
+                double.Parse(_TextBox_Interval_R.Text);
             }
             catch (Exception)
             {
                 /// e.Cancel = true;
-                _TextBox_RInterval.Text = _defaultR.ToString();
+                _TextBox_Interval_R.Text = _defaultR.ToString();
                 Log("잘못된 R 간격 값입니다.");
             }
         }
@@ -667,6 +682,13 @@ namespace HandySubtitler
 
 
         #region 구형 정의를 보관합니다.
+        /// <summary>
+        /// 
+        /// </summary>
+        public void X()
+        {
+
+        }
 
         #endregion
     }

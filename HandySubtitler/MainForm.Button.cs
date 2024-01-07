@@ -173,7 +173,7 @@ namespace HandySubtitler
         /// <param name="e">이벤트 정보를 담은 객체입니다.</param>
         private void _HelpMenuItem_Developer_Click(object sender, EventArgs e)
         {
-            Handy.GUI.DeveloperDialog.ShowForm();
+            //Handy.GUI.DeveloperDialog.ShowForm();
         }
 
         #endregion
